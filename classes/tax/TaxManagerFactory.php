@@ -69,7 +69,7 @@ class TaxManagerFactoryCore
 
         foreach ($modules_infos as $module_infos) {
             $module_instance = Module::getInstanceByName($module_infos['name']);
-            if (is_callable([$module_instance, 'hookTaxManager'])) {
+            if (is_callable([$module_instance, 'hookActionTaxManager'])) {
                 $tax_manager = $module_instance->hookTaxManager([
                     'address' => $address,
                     'params' => $type,
