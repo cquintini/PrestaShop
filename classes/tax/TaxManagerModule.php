@@ -29,10 +29,10 @@ abstract class TaxManagerModuleCore extends Module
 
     public function install()
     {
-        return parent::install() && $this->registerHook('taxManager');
+        return parent::install() && $this->registerHook('actionTaxManager');
     }
 
-    public function hookTaxManager($args)
+    public function hookActionTaxManager($args)
     {
         $class_file = _PS_MODULE_DIR_ . '/' . $this->name . '/' . $this->tax_manager_class . '.php';
 
